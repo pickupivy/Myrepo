@@ -5,6 +5,12 @@
 
 将pc文件夹映射到本地的目的是为了方便用CMD命令进行访问。
 
+在CMD窗口下将远程的共享文件夹映射为本地的Y盘：
+net use y: \\172.29.17.1\pc "<password>" /user:RSDOMAIN\<username>
+net use y: \\172.29.17.1\pc "<password>" /user:<username>
+<>符号为修饰符, 例：
+net use y: \\172.29.17.1\pc "abc123" /user:Tony
+注意y:后面必须有一个空格
 
 2.接着，打开CMD窗口，输入dir y:\SD\FW2\Document\*.pdf /s/q > d:\work\pdflist.txt
 就可以将"Document"文件夹及其子文件夹下的所有PDF文件以列表的形式打印出来。

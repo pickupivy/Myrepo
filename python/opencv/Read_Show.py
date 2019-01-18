@@ -1,10 +1,13 @@
 import cv2
 import numpy
  
-img = cv2.imread("11.jpg",0)
+img = cv2.imread("11.jpg",0)	# Load an color image in grayscale
 cv2.namedWindow('hey', cv2.WINDOW_NORMAL)	#you can resize window
 #cv2.namedWindow('hey', cv2.WINDOW_AUTOSIZE)
-cv2.imshow("hey",img)	#"hey" is the window name
+
+cv2.imshow("hey",img)	#"hey" is the window name; 
+#if the window is not exist, then it will be created
+
 k=cv2.waitKey(0)
 #单位ms, 0表示永久
 

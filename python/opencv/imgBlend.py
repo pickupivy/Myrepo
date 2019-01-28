@@ -18,6 +18,8 @@ img2 = cv.imread('cut2.png')
 
 cv.namedWindow('dstWd')
 cv.createTrackbar('bili','dstWd',0,100,slideBar)
+#cv::createTrackbar(trackbarname,winname,start value,max value,callbackfunction)
+
 
 dst = cv.addWeighted(img1,0.1,img2,0.9,0)	#初始化值
 #cv.imshow('dstWd',dst)

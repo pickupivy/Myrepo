@@ -6,6 +6,7 @@ cap = cv.VideoCapture(0)
 fourcc = cv.VideoWriter_fourcc(*'XVID')
 #FourCC code is passed as cv.VideoWriter_fourcc('M','J','P','G')or cv.VideoWriter_fourcc(*'MJPG') for MJPG.
 out = cv.VideoWriter('output.avi',fourcc, 20.0, (640,480))
+#VideoWriter (const String &filename, int fourcc, double fps, Size frameSize, bool isColor=true)
 while(cap.isOpened()):
     ret, frame = cap.read()
     if ret==True:
